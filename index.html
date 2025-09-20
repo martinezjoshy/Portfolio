@@ -1,122 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal IT Portfolio">
-    <meta name="author" content="Your Name">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-</head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshua Martinez Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      background: #059cbd;
+      color: #333;
+    }
+
+    /* Sidebar */
+    aside {
+      width: 250px;
+      background: #1e1e2f;
+      color: #fff;
+      min-height: 100vh;
+      padding: 30px 20px;
+      position: fixed;
+      text-align: center;
+    }
+
+    aside img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #4fc3f7;
+      object-fit: cover;
+    }
+
+    aside h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    aside nav a {
+      display: block;
+      color: #bbb;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    aside nav a:hover {
+      color: #4fc3f7;
+      padding-left: 5px;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 250px;
+      flex: 1;
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 50px;
+      padding: 25px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #000000;
+      margin-bottom: 15px;
+      border-left: 5px solid #000000;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin: 8px 0;
+      background: #f0f4f8;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    /* Project images */
+    .project {
+      margin-bottom: 20px;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #1e88e5;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-    <!-- Header -->
-    <header id="header" class="header">  
-        <nav class="main-nav navbar-expand-md" role="navigation">  
-	        <div class="container-fluid position-relative">
-                <a class="logo navbar-brand scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="Background" alt="icon"></span>
-                    <span class="text"><span class="highlight">MY</span>PORTFOLIO</span>
-                </a>
-            </div>
-        </nav>                  
-    </header>
-    
-    <!-- Hero Section -->
-    <div id="hero" class="hero-section">
-        <div class="container text-center">
-            <h1 class="heading">Hello, I'm <span class="highlight">Your Name</span></h1>
-            <p class="intro">An IT professional passionate about web development, software engineering, and technology solutions.</p>
-            <a class="btn btn-primary btn-cta" href="#about">Explore More</a>
-        </div>
-    </div>
-    
-    <!-- About Section -->
-    <div id="about" class="about-section">
-        <div class="container text-center">
-            <h2 class="section-title">About Me</h2>
-            <p class="intro">Write a short bio here: who you are, your background, your career goals, and what excites you in IT.</p>
-            <ul class="technologies list-inline">
-                <li class="list-inline-item"><img src="assets/images/logo-html5.svg" alt="HTML5"></li>
-                <li class="list-inline-item"><img src="assets/images/logo-css3.svg" alt="CSS3"></li>
-                <li class="list-inline-item"><img src="assets/images/logo-bootstrap.svg" alt="Bootstrap"></li>
-                <li class="list-inline-item"><img src="assets/images/logo-js.svg" alt="JavaScript"></li>
-                <li class="list-inline-item"><img src="assets/images/logo-sass.svg" alt="Sass"></li>
-            </ul>
-        </div>
-    </div>
-    
-    <!-- Skills Section -->
-    <div id="skills" class="features-section">
-        <div class="container text-center">
-            <h2 class="section-title">My Skills</h2>
-            <p class="intro">Here are some of my technical skills and tools I work with.</p>
-            <div class="row">
-                <div class="col-md-4"><i class="fa-solid fa-code fa-2x mb-2"></i><h4>Web Development</h4><p>HTML, CSS, JavaScript, Bootstrap, React</p></div>
-                <div class="col-md-4"><i class="fa-solid fa-database fa-2x mb-2"></i><h4>Database</h4><p>MySQL, MongoDB, Firebase</p></div>
-                <div class="col-md-4"><i class="fa-solid fa-network-wired fa-2x mb-2"></i><h4>Networking</h4><p>Basic networking & system admin</p></div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Projects Section -->
-    <div id="projects" class="about-section">
-        <div class="container text-center">
-            <h2 class="section-title">Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="item-inner">
-                        <h3 class="item-title">Project One</h3>
-                        <p class="item-desc">Short description of your project. Tech stack used.</p>
-                        <a class="btn btn-primary" href="#">View Project</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item-inner">
-                        <h3 class="item-title">Project Two</h3>
-                        <p class="item-desc">Short description of your project. Tech stack used.</p>
-                        <a class="btn btn-primary" href="#">View Project</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item-inner">
-                        <h3 class="item-title">Project Three</h3>
-                        <p class="item-desc">Short description of your project. Tech stack used.</p>
-                        <a class="btn btn-primary" href="#">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Contact Section -->
-    <div id="contact" class="contact-section">
-        <div class="container text-center">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>If you'd like to connect, feel free to reach out via the platforms below.</p>
-            <ul class="social list-inline">
-                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github fa-2x"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <small class="copyright">© 2025 Your Name | IT Portfolio</small>
-        </div>
+
+  <!-- Sidebar -->
+  <aside>
+    <!-- Add your profile picture here -->
+    <img src="profile.jpg" alt="Profile Picture">
+    <h2>Joshua Martinez</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about">
+      <h2>What About Me?</h2>
+      <p>Hi! I'm an IT professional specializing in software development, web technologies, and innovative IT solutions. Passionate about problem-solving and continuous learning.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: Python, Java, C++, JavaScript</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Database Management: MySQL</li>
+        <li>Networking</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      
+      <div class="project">
+        <p><strong>Project 1:</strong> Portfolio Website – A responsive web portfolio.</p>
+        <img src="project1.jpg" alt="Portfolio Project Screenshot">
+      </div>
+
+      <div class="project">
+        <p><strong>Project 2:</strong> IT Helpdesk System – Ticketing system built with PHP/MySQL.</p>
+        <img src="project2.jpg" alt="Helpdesk Project Screenshot">
+      </div>
+
+      <div class="project">
+        <p><strong>Project 3:</strong> Chatbot AI – Python-based chatbot project.</p>
+        <img src="project3.jpg" alt="Chatbot Project Screenshot">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:Joshua.martinez.edu.ph">Joshua.martinez.edu.ph</a></p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/Joshua</a></p>
+      <p>GitHub: <a href="#" target="_blank">github.com/itsmejoshy</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Martinez Joshua | <a href="#about">Back to top</a></p>
     </footer>
-     
-    <!-- Javascript -->          
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script> 
+  </main>
+
 </body>
 </html>
